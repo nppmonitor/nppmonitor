@@ -13,6 +13,7 @@ const API_CONFIG = {
 // Réacteurs programmés en arrêt selon le calendrier typique d'EDF (rechargement / visites décennales)
 // Permet une répartition ultra-réaliste des 57 tranches conforme à la réalité du parc
 const KNOWN_OUTAGE_SCHEDULE = {
+  'nogent_1': { status: 'PLANNED_STOP', reason: 'Visite partielle : renouvellement du combustible, maintenance des générateurs de vapeur et modifications de sûreté' },
   'cattenom_3': { status: 'PLANNED_STOP', reason: 'Arrêt pour rechargement du combustible et maintenance programmée' },
   'paluel_2': { status: 'PLANNED_STOP', reason: 'Visite décennale VD4 (contrôles cuve et enceinte)' },
   'dampierre_4': { status: 'PLANNED_STOP', reason: 'Rechargement combustible et contrôle générateurs de vapeur' },
@@ -27,7 +28,7 @@ const KNOWN_OUTAGE_SCHEDULE = {
 };
 
 // Réacteurs en modulation / suivi de charge typique du réseau français
-const MODULATING_CANDIDATES = ['gravelines_5', 'nogent_1', 'civaux_2', 'belleville_2', 'st_alban_1'];
+const MODULATING_CANDIDATES = ['gravelines_5', 'civaux_2', 'belleville_2', 'st_alban_1'];
 
 class NuclearMonitorAPI {
   constructor() {
@@ -36,6 +37,28 @@ class NuclearMonitorAPI {
     this.lastUpdated = null;
     this.isOfflineMode = false;
     this.history24h = [];
+    this.realLiveUnits = (typeof RTE_LIVE_UNITS !== 'undefined' && RTE_LIVE_UNITS && RTE_LIVE_UNITS.units) ? RTE_LIVE_UNITS.units : null;
+    this.realLiveUnitsMeta = (typeof RTE_LIVE_UNITS !== 'undefined' && RTE_LIVE_UNITS) ? RTE_LIVE_UNITS : null;
+  }
+
+  /**
+   * Tente de charger le fichier de télémesure réelle officielle généré par fetch_rte_units.py
+   */
+  async fetchLiveUnitsFile() {
+    try {
+      const resp = await fetch(`data/live_units.json?t=${Date.now()}`, { cache: 'no-cache' });
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data && data.units && Object.keys(data.units).length > 0) {
+          this.realLiveUnits = data.units;
+          this.realLiveUnitsMeta = data;
+          return data;
+        }
+      }
+    } catch (e) {
+      // Fichier local absent ou non servi, continuation sur le modèle calibré
+    }
+    return null;
   }
 
   /**
@@ -218,96 +241,108 @@ class NuclearMonitorAPI {
 
     const targetMW = nationalNuclearMW || (this.lastNationalData ? this.lastNationalData.nuclearMW : 39500);
 
-    // Étape 1 : Classifier les réacteurs
+    // Étape 1 : Classifier et affecter les réacteurs
     const reactors = JSON.parse(JSON.stringify(NUCLEAR_REACTORS));
-    let assignedFixedMW = 0;
-    const runningReactors = [];
-    const modulatingReactors = [];
 
-    // Détermination de l'état de l'EPR Flamanville 3 (en montée en puissance / essais réseau)
-    const eprReactor = reactors.find(r => r.stage === 'EPR');
-    if (eprReactor) {
-      eprReactor.status = 'COMMISSIONING';
-      eprReactor.statusLabel = 'Essais & montée en puissance (EPR)';
-      eprReactor.statusClass = 'status-commissioning';
-      // Flamanville 3 fournit une puissance palier durant ses essais (ex: ~1200 MW)
-      eprReactor.currentPower = 1180;
-      assignedFixedMW += eprReactor.currentPower;
-    }
+    // Si un flux officiel unitaire RTE est disponible (via scripts/fetch_rte_units.py)
+    if (this.realLiveUnits && Object.keys(this.realLiveUnits).length > 0) {
+      reactors.forEach(r => {
+        const live = this.realLiveUnits[r.id];
+        if (live) {
+          r.currentPower = live.currentPower;
+          r.loadFactor = String(live.loadFactor);
+          r.status = live.status;
+          r.statusLabel = live.statusLabel;
+          r.statusClass = live.statusClass;
+          if (live.history && live.history.length > 0) {
+            r.history24h = live.history;
+          }
+        }
+      });
+    } else {
+      let assignedFixedMW = 0;
+      const runningReactors = [];
+      const modulatingReactors = [];
 
-    // Assignation des arrêts programmés et fortuits
-    reactors.forEach(r => {
-      if (r.stage === 'EPR') return;
-
-      const scheduledOutage = KNOWN_OUTAGE_SCHEDULE[r.id];
-      if (scheduledOutage) {
-        r.status = scheduledOutage.status;
-        r.statusLabel = scheduledOutage.status === 'PLANNED_STOP'
-          ? 'Arrêt programmé (rechargement / maintenance)'
-          : 'Arrêt fortuit / maintenance non planifiée';
-        r.statusClass = scheduledOutage.status === 'PLANNED_STOP' ? 'status-planned-stop' : 'status-unplanned-stop';
-        r.reason = scheduledOutage.reason;
-        r.currentPower = 0;
-      } else if (MODULATING_CANDIDATES.includes(r.id)) {
-        r.status = 'MODULATING';
-        r.statusLabel = 'En modulation (suivi de réseau)';
-        r.statusClass = 'status-modulating';
-        r.targetRatio = 0.65; // Modulé à ~65%
-        modulatingReactors.push(r);
-      } else {
-        r.status = 'RUNNING';
-        r.statusLabel = 'En production nominale';
-        r.statusClass = 'status-running';
-        r.targetRatio = 0.99; // 99% de la puissance nominale
-        runningReactors.push(r);
+      // Détermination de l'état de l'EPR Flamanville 3 (en montée en puissance / essais réseau)
+      const eprReactor = reactors.find(r => r.stage === 'EPR');
+      if (eprReactor) {
+        eprReactor.status = 'COMMISSIONING';
+        eprReactor.statusLabel = 'Essais & montée en puissance (EPR)';
+        eprReactor.statusClass = 'status-commissioning';
+        eprReactor.currentPower = 1180;
+        assignedFixedMW += eprReactor.currentPower;
       }
-    });
 
-    // Puissance résiduelle à distribuer aux réacteurs en service et en modulation
-    const remainingTargetMW = Math.max(0, targetMW - assignedFixedMW);
+      // Assignation des arrêts programmés et fortuits
+      reactors.forEach(r => {
+        if (r.stage === 'EPR') return;
 
-    // Capacité nominale cumulée des unités en fonctionnement
-    const runningNominalTotal = runningReactors.reduce((sum, r) => sum + r.netPower_MW, 0);
-    const modulatingNominalTotal = modulatingReactors.reduce((sum, r) => sum + r.netPower_MW * r.targetRatio, 0);
-    const availableNominalSum = runningNominalTotal + modulatingNominalTotal;
+        const scheduledOutage = KNOWN_OUTAGE_SCHEDULE[r.id];
+        if (scheduledOutage) {
+          r.status = scheduledOutage.status;
+          r.statusLabel = scheduledOutage.status === 'PLANNED_STOP'
+            ? 'Arrêt programmé (rechargement / maintenance)'
+            : 'Arrêt fortuit / maintenance non planifiée';
+          r.statusClass = scheduledOutage.status === 'PLANNED_STOP' ? 'status-planned-stop' : 'status-unplanned-stop';
+          r.reason = scheduledOutage.reason;
+          r.currentPower = 0;
+        } else if (MODULATING_CANDIDATES.includes(r.id)) {
+          r.status = 'MODULATING';
+          r.statusLabel = 'En modulation (suivi de réseau)';
+          r.statusClass = 'status-modulating';
+          r.targetRatio = 0.65;
+          modulatingReactors.push(r);
+        } else {
+          r.status = 'RUNNING';
+          r.statusLabel = 'En production nominale';
+          r.statusClass = 'status-running';
+          r.targetRatio = 0.99;
+          runningReactors.push(r);
+        }
+      });
 
-    const scaleFactor = availableNominalSum > 0 ? (remainingTargetMW / availableNominalSum) : 0.85;
+      // Puissance résiduelle à distribuer aux réacteurs en service et en modulation
+      const remainingTargetMW = Math.max(0, targetMW - assignedFixedMW);
 
-    // Étape 2 : Assigner la puissance exacte à chaque réacteur
-    let totalCalculated = assignedFixedMW;
+      const runningNominalTotal = runningReactors.reduce((sum, r) => sum + r.netPower_MW, 0);
+      const modulatingNominalTotal = modulatingReactors.reduce((sum, r) => sum + r.netPower_MW * r.targetRatio, 0);
+      const availableNominalSum = runningNominalTotal + modulatingNominalTotal;
 
-    runningReactors.forEach(r => {
-      // Légère variation pseudo-aléatoire stable basée sur le réacteur pour simuler les télémesures précises
-      const hash = (r.name.charCodeAt(0) + r.netPower_MW) % 17;
-      const microJitter = 1 + ((hash - 8) / 1000);
-      let power = Math.round(r.netPower_MW * scaleFactor * microJitter);
-      power = Math.min(power, Math.round(r.netPower_MW * 1.03)); // Plafond physique à 103%
-      power = Math.max(power, 0);
-      r.currentPower = power;
-      totalCalculated += power;
-    });
+      const scaleFactor = availableNominalSum > 0 ? (remainingTargetMW / availableNominalSum) : 0.85;
 
-    modulatingReactors.forEach(r => {
-      let power = Math.round(r.netPower_MW * r.targetRatio * scaleFactor);
-      power = Math.min(power, r.netPower_MW);
-      power = Math.max(power, 150);
-      r.currentPower = power;
-      totalCalculated += power;
-    });
+      let totalCalculated = assignedFixedMW;
 
-    // Ajustement fin du dernier mégawatt pour que la somme corresponde exactement au total RTE
-    const diff = targetMW - totalCalculated;
-    if (diff !== 0 && runningReactors.length > 0) {
-      runningReactors[0].currentPower += diff;
+      runningReactors.forEach(r => {
+        const hash = (r.name.charCodeAt(0) + r.netPower_MW) % 17;
+        const microJitter = 1 + ((hash - 8) / 1000);
+        let power = Math.round(r.netPower_MW * scaleFactor * microJitter);
+        power = Math.min(power, Math.round(r.netPower_MW * 1.03));
+        power = Math.max(power, 0);
+        r.currentPower = power;
+        totalCalculated += power;
+      });
+
+      modulatingReactors.forEach(r => {
+        let power = Math.round(r.netPower_MW * r.targetRatio * scaleFactor);
+        power = Math.min(power, r.netPower_MW);
+        power = Math.max(power, 150);
+        r.currentPower = power;
+        totalCalculated += power;
+      });
+
+      // Ajustement fin pour correspondre exactement au total RTE
+      const diff = targetMW - totalCalculated;
+      if (diff !== 0 && runningReactors.length > 0) {
+        runningReactors[0].currentPower += diff;
+      }
+
+      // Facteur de charge et historique
+      reactors.forEach(r => {
+        r.loadFactor = r.netPower_MW > 0 ? ((r.currentPower / r.netPower_MW) * 100).toFixed(1) : '0.0';
+        r.history24h = this.generateReactor24hHistory(r);
+      });
     }
-
-    // Calcul du facteur de charge et historique 24h individuel
-    reactors.forEach(r => {
-      r.loadFactor = r.netPower_MW > 0 ? ((r.currentPower / r.netPower_MW) * 100).toFixed(1) : '0.0';
-
-      // Générer l'historique 24h du réacteur calé sur la tendance nationale
-      r.history24h = this.generateReactor24hHistory(r);
-    });
 
     // Étape 3 : Agréger par centrale nucléaire (18 centrales)
     const plants = JSON.parse(JSON.stringify(NUCLEAR_PLANTS));

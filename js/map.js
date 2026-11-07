@@ -48,6 +48,21 @@ class NuclearMap {
     };
     this.layerControl = L.control.layers(baseLayers, null, { position: 'topright' }).addTo(this.map);
 
+    // Amélioration de l'ergonomie : ouverture/fermeture au clic sur l'icône de calques
+    const layersContainer = this.layerControl.getContainer();
+    const toggleBtn = layersContainer.querySelector('.leaflet-control-layers-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (layersContainer.classList.contains('leaflet-control-layers-expanded')) {
+          this.layerControl.collapse();
+        } else {
+          this.layerControl.expand();
+        }
+      });
+    }
+
     // Contrôle d'attribution discret
     L.control.attribution({
       position: 'bottomright',

@@ -1339,7 +1339,7 @@ const NUCLEAR_REACTORS = [
     "id": "flamanville_3",
     "name": "Flamanville 3",
     "code": "Flamanville-3",
-    "eicCode": "17W100P100P0128X",
+    "eicCode": "17W100P100P03639",
     "plantId": "FLAMANVILLE",
     "reactorIndex": 3,
     "stage": "EPR",

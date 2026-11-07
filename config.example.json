@@ -1,0 +1,6 @@
+{
+  "rte_client_id": "VOTRE_CLIENT_ID_ACTUAL_GENERATION",
+  "rte_client_secret": "VOTRE_CLIENT_SECRET_ACTUAL_GENERATION",
+  "rte_unavailability_client_id": "VOTRE_CLIENT_ID_UNAVAILABILITY",
+  "rte_unavailability_client_secret": "VOTRE_CLIENT_SECRET_UNAVAILABILITY"
+}

@@ -258,6 +258,7 @@ class NuclearMonitorApp {
     if (refreshBtn) refreshBtn.classList.add('refreshing');
 
     try {
+      await apiService.fetchLiveUnitsFile();
       this.nationalData = await apiService.fetchLiveEco2mix();
       this.fleetData = apiService.calibrateFleet(this.nationalData.nuclearMW);
 
@@ -276,18 +277,6 @@ class NuclearMonitorApp {
       const updatedEl = document.getElementById('last-sync-time');
       if (updatedEl) {
         updatedEl.textContent = this.nationalData.formattedTime;
-      }
-
-      // Indicateur de source
-      const badgeSource = document.getElementById('badge-data-source');
-      if (badgeSource) {
-        if (apiService.isOfflineMode) {
-          badgeSource.className = 'source-badge badge-warning';
-          badgeSource.innerHTML = '⚡ Modèle calibré (hors-ligne)';
-        } else {
-          badgeSource.className = 'source-badge badge-success';
-          badgeSource.innerHTML = '🟢 RTE éCO2mix Live';
-        }
       }
     } catch (err) {
       console.error('Erreur de rafraîchissement:', err);

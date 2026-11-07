@@ -8,14 +8,48 @@ import http.server
 import socketserver
 import os
 import sys
+import json
+import threading
+import time
 import webbrowser
 
 PORT = 8080
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
+# Import du module de synchronisation RTE
+try:
+    sys.path.insert(0, os.path.join(DIRECTORY, 'scripts'))
+    import fetch_rte_units
+except ImportError:
+    fetch_rte_units = None
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+    def do_GET(self):
+        # Point d'accès pour déclencher un rafraîchissement RTE immédiat
+        if self.path == '/api/refresh-rte':
+            if fetch_rte_units:
+                success, data = fetch_rte_units.run_sync()
+                self.send_response(200 if success else 500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.end_headers()
+                response = {
+                    'success': success,
+                    'timestamp': time.time(),
+                    'message': 'Synchronisation RTE terminée avec succès' if success else str(data)
+                }
+                self.wfile.write(json.dumps(response).encode('utf-8'))
+                return
+            else:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.end_headers()
+                self.wfile.write(b'{"success": false, "message": "Module fetch_rte_units indisponible"}')
+                return
+
+        return super().do_GET()
 
     def end_headers(self):
         # Activation des en-têtes CORS pour les requêtes locales
@@ -35,6 +69,24 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return 'text/html; charset=utf-8'
         return super().guess_type(path)
 
+def start_background_rte_syncer(interval_minutes=15):
+    """Boucle d'arrière-plan pour rafraîchir automatiquement l'API RTE toutes les 15 minutes."""
+    if not fetch_rte_units:
+        return
+
+    def sync_loop():
+        time.sleep(3) # Petite attente au démarrage
+        while True:
+            try:
+                print("\n[🔄 Background Sync] Rafraîchissement automatique de la télémesure RTE...")
+                fetch_rte_units.run_sync()
+            except Exception as e:
+                print(f"[!] Erreur de synchronisation en tâche de fond: {e}")
+            time.sleep(interval_minutes * 60)
+
+    t = threading.Thread(target=sync_loop, daemon=True)
+    t.start()
+
 def find_available_port(start_port=8080):
     import socket
     port = start_port
@@ -50,13 +102,17 @@ def run():
     url = f"http://localhost:{port}"
 
     print("=" * 60)
-    print(" ⚛️  NPP MONITOR - SERVEUR LOCAL")
+    print(" ⚛️  NPP MONITOR - SERVEUR LOCAL & API SYNC")
     print("=" * 60)
-    print(f" ▶ Serveur démarré avec succès !")
-    print(f" ▶ URL locale : {url}")
-    print(f" ▶ Dossier    : {DIRECTORY}")
+    print(f" ▶ Serveur web démarré avec succès !")
+    print(f" ▶ URL locale     : {url}")
+    print(f" ▶ Dossier        : {DIRECTORY}")
+    print(f" ▶ Synchro RTE    : Active toutes les 15 minutes en tâche de fond")
     print("=" * 60)
     print(" Appuyez sur Ctrl+C pour arrêter le serveur.\n")
+
+    # Démarrage de la boucle de synchronisation temps réel avec RTE
+    start_background_rte_syncer(interval_minutes=15)
 
     # Ouvrir automatiquement le navigateur si lancé directement
     if len(sys.argv) > 1 and sys.argv[1] == '--open':

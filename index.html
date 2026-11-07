@@ -52,11 +52,8 @@
 
       <!-- Statut en direct & Rafraîchissement -->
       <div class="header-status-area">
-        <div class="live-indicator">
-          <span class="pulse-dot"></span>
-          <span id="badge-data-source" class="source-badge badge-success">🟢 RTE éCO2mix Live</span>
-        </div>
-        <div class="sync-info" style="font-size: 0.75rem; color: var(--text-dim);">
+        <div class="sync-info" style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; color: var(--text-dim);">
+          <span class="pulse-dot" title="Flux direct"></span>
           Synchro : <strong id="last-sync-time" style="color: var(--text-muted); font-family: var(--font-mono);">--:--</strong>
         </div>
         <button id="btn-refresh-now" class="btn-refresh" title="Actualiser les données immédiatement">
@@ -405,6 +402,7 @@
 
   <!-- Scripts dans l'ordre -->
   <script src="js/data.js"></script>
+  <script src="js/live_units.js"></script>
   <script src="js/api.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/map.js"></script>
