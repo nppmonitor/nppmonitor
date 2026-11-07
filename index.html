@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPP Monitor · Suivi en direct du parc nucléaire</title>
+  <meta name="description" content="Suivi en temps réel de la production et de la disponibilité des 57 réacteurs nucléaires français. Données RTE éCO2mix et ODRÉ.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- En-tête de l'application -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="atom-icon">⚛️</span>
+        <div>
+          <h1 class="site-title">NPP MONITOR</h1>
+        </div>
+      </div>
+
+      <!-- Navigation principale -->
+      <nav class="nav-tabs" aria-label="Navigation principale">
+        <button class="nav-tab active" data-tab="map">
+          <span>🗺️</span> Carte du Parc
+        </button>
+        <button class="nav-tab" data-tab="fleet">
+          <span>⚛️</span> Flotte & Réacteurs
+        </button>
+        <button class="nav-tab" data-tab="mix">
+          <span>⚡</span> Mix & Échanges
+        </button>
+        <button class="nav-tab" data-tab="about">
+          <span>ℹ️</span> Méthodologie
+        </button>
+      </nav>
+
+      <!-- Statut en direct & Rafraîchissement -->
+      <div class="header-status-area">
+        <div class="live-indicator">
+          <span class="pulse-dot"></span>
+          <span id="badge-data-source" class="source-badge badge-success">🟢 RTE éCO2mix Live</span>
+        </div>
+        <div class="sync-info" style="font-size: 0.75rem; color: var(--text-dim);">
+          Synchro : <strong id="last-sync-time" style="color: var(--text-muted); font-family: var(--font-mono);">--:--</strong>
+        </div>
+        <button id="btn-refresh-now" class="btn-refresh" title="Actualiser les données immédiatement">
+          <span class="refresh-icon">🔄</span>
+          <span id="countdown-seconds">60s</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bandeau Synthèse des KPIs Nationaux -->
+  <section class="kpis-banner" aria-label="Indicateurs clés du parc nucléaire">
+    <div class="kpis-container">
+      <div class="kpi-cards-grid">
+        <!-- KPI 1 : Puissance totale -->
+        <div class="kpi-card kpi-card-highlight">
+          <div class="kpi-label">Production Nucléaire Instantanée</div>
+          <div class="kpi-value-row">
+            <span id="kpi-total-power" class="kpi-value text-emerald">-- ---</span>
+            <span class="power-unit" style="font-size: 1rem; color: var(--text-muted);">MW</span>
+          </div>
+          <div class="kpi-sub">Équivalent à <strong id="kpi-total-gw" style="color: var(--text-main);">--.-- GW</strong> injectés sur le réseau</div>
+        </div>
+
+        <!-- KPI 2 : Facteur de charge -->
+        <div class="kpi-card">
+          <div class="kpi-label">Facteur de Charge Global</div>
+          <div class="kpi-value-row">
+            <span id="kpi-load-factor" class="kpi-value text-cyan">--.-%</span>
+          </div>
+          <div class="kpi-sub">Capacité nominale totale : <strong>62 900 MW</strong> (57 réacteurs)</div>
+        </div>
+
+        <!-- KPI 3 : Part dans le mix -->
+        <div class="kpi-card">
+          <div class="kpi-label">Part du Nucléaire dans le Mix</div>
+          <div class="kpi-value-row">
+            <span id="kpi-mix-share" class="kpi-value">--.-%</span>
+          </div>
+          <div class="kpi-sub">De la production électrique française en direct</div>
+        </div>
+
+        <!-- KPI 4 : Solde Exportateur -->
+        <div class="kpi-card">
+          <div class="kpi-label">Solde des Échanges Internationaux</div>
+          <div class="kpi-value-row">
+            <span id="kpi-net-export" class="kpi-value text-emerald">+-- --- MW</span>
+          </div>
+          <div class="kpi-sub">Flux commercial net vers les pays voisins</div>
+        </div>
+
+        <!-- KPI 5 : Intensité carbone -->
+        <div class="kpi-card">
+          <div class="kpi-label">Intensité Carbone de l'Électricité</div>
+          <div class="kpi-value-row">
+            <span id="kpi-co2-intensity" class="kpi-value">-- g/kWh</span>
+          </div>
+          <div class="kpi-sub">Émissions directes du mix français (RTE)</div>
+        </div>
+      </div>
+
+      <!-- Bandeau de disponibilité des 57 tranches -->
+      <div class="fleet-availability-strip">
+        <div class="strip-header">
+          <span class="strip-title">État du parc en direct (57 tranches) :</span>
+          <div class="strip-chips">
+            <span class="fleet-chip chip-running" title="Puissance nominale supérieure à 85%">
+              🟢 <strong id="chip-count-running">--</strong> En production
+            </span>
+            <span class="fleet-chip chip-modulating" title="Puissance modulée entre 15% et 85%">
+              🔵 <strong id="chip-count-modulating">--</strong> En modulation
+            </span>
+            <span class="fleet-chip chip-planned" title="Rechargement combustible ou visite décennale VD4">
+              🟠 <strong id="chip-count-planned">--</strong> Arrêt programmé
+            </span>
+            <span class="fleet-chip chip-unplanned" title="Maintenance imprévue ou aléa technique">
+              🔴 <strong id="chip-count-unplanned">--</strong> Arrêt fortuit
+            </span>
+            <span class="fleet-chip chip-epr" title="Flamanville 3 en phase d'essais">
+              🟣 <strong id="chip-count-epr">--</strong> Essais EPR
+            </span>
+          </div>
+        </div>
+
+        <!-- Barre de répartition proportionnelle -->
+        <div class="fleet-proportional-bar">
+          <div id="fleet-bar-running" class="bar-segment bar-running" style="width: 70%;"></div>
+          <div id="fleet-bar-modulating" class="bar-segment bar-modulating" style="width: 8%;"></div>
+          <div id="fleet-bar-planned" class="bar-segment bar-planned" style="width: 17%;"></div>
+          <div id="fleet-bar-unplanned" class="bar-segment bar-unplanned" style="width: 3%;"></div>
+          <div id="fleet-bar-epr" class="bar-segment bar-epr" style="width: 2%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corps Principal -->
+  <main class="main-content">
+
+    <!-- ONGLET 1 (ACCUEIL) : Carte Interactive du Parc -->
+    <section id="tab-map" class="tab-pane">
+      <div class="map-view-wrapper">
+        <header class="map-view-header">
+          <div class="map-view-title">
+            📍 Carte Interactive des 18 Centrales Nucléaires Françaises
+          </div>
+          <div class="map-legend">
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: #10b981;"></span> 100% nominal
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: #06b6d4;"></span> En modulation
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: #f59e0b;"></span> Arrêt partiel
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: #8b5cf6;"></span> EPR en essais
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: #ef4444;"></span> Arrêt total
+            </div>
+          </div>
+        </header>
+        <div id="france-map-container"></div>
+      </div>
+
+      <!-- Barre d'accès rapide aux 18 centrales sous la carte -->
+      <div class="map-plants-section">
+        <h3 class="section-title" style="margin-top: 1.25rem;">Les 18 Centrales Nucléaires Françaises (Cliquez pour zoomer ou inspecter) :</h3>
+        <div id="map-quick-plants" class="plants-quick-grid">
+          <!-- Rempli dynamiquement par app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ONGLET 2 : Flotte & Réacteurs (Grille / Tableau) -->
+    <section id="tab-fleet" class="tab-pane hidden">
+      <!-- Barre d'outils et de filtres -->
+      <div class="controls-toolbar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="search-reactors" placeholder="Filtrer par réacteur, centrale, palier...">
+        </div>
+
+        <div class="filter-group">
+          <!-- Filtre statut -->
+          <select id="filter-status" class="filter-select" aria-label="Filtrer par statut">
+            <option value="ALL">Tous les statuts</option>
+            <option value="RUNNING">🟢 En production nominale</option>
+            <option value="MODULATING">🔵 En modulation de charge</option>
+            <option value="PLANNED_STOP">🟠 Arrêt programmé (rechargement/VD4)</option>
+            <option value="UNPLANNED_STOP">🔴 Arrêt fortuit / imprévu</option>
+            <option value="COMMISSIONING">🟣 Essais & divergence (EPR)</option>
+          </select>
+
+          <!-- Filtre palier -->
+          <select id="filter-stage" class="filter-select" aria-label="Filtrer par palier technologique">
+            <option value="ALL">Tous les paliers</option>
+            <option value="900">Palier 900 MW (CP0, CP1, CP2)</option>
+            <option value="1300">Palier 1300 MW (P4, P'4)</option>
+            <option value="1450">Palier 1450 MW (N4 Chooz & Civaux)</option>
+            <option value="EPR">Palier EPR 1650 MW (Flamanville 3)</option>
+          </select>
+
+          <!-- Filtre refroidissement -->
+          <select id="filter-cooling" class="filter-select" aria-label="Filtrer par type de refroidissement">
+            <option value="ALL">Tout refroidissement</option>
+            <option value="RIVER">🏞️ Fleuve / Rivière</option>
+            <option value="SEA">🌊 Mer / Manche / Mer du Nord</option>
+          </select>
+
+          <!-- Tri -->
+          <select id="filter-sort" class="filter-select" aria-label="Trier les réacteurs">
+            <option value="power_desc">Puissance décroissante</option>
+            <option value="load_desc">Facteur de charge (%)</option>
+            <option value="capacity_desc">Capacité nominale (MW)</option>
+            <option value="name_asc">Nom de tranche (A-Z)</option>
+            <option value="plant_asc">Centrale (A-Z)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span id="filtered-reactors-count" class="results-meta">57 réacteurs</span>
+          <div class="view-mode-buttons">
+            <button id="btn-view-grid" class="btn-view-toggle active" title="Affichage en cartes">▦ Grille</button>
+            <button id="btn-view-table" class="btn-view-toggle" title="Affichage en tableau">☰ Tableau</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vue Grille de cartes -->
+      <div id="fleet-grid-view" class="reactors-grid">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+
+      <!-- Vue Tableau compact -->
+      <div id="fleet-table-view" class="table-container hidden">
+        <table class="fleet-table">
+          <thead>
+            <tr>
+              <th>Réacteur</th>
+              <th>Centrale</th>
+              <th>Palier</th>
+              <th class="text-right">Production actuelle</th>
+              <th class="text-right">Capacité nominale</th>
+              <th class="text-right">Charge</th>
+              <th>Statut opérationnel</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="fleet-table-body">
+            <!-- Rempli dynamiquement par app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ONGLET 3 : Mix Énergétique & Échanges Nationaux -->
+    <section id="tab-mix" class="tab-pane hidden">
+      <div class="mix-grid">
+        <!-- Graphique Courbe 24h -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Courbe de Production 24h : Nucléaire vs Demande</h3>
+            <p class="chart-sub">Évolution consolidée heure par heure selon RTE éCO2mix</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="generation-chart-canvas"></canvas>
+          </div>
+        </div>
+
+        <!-- Graphique Mix Circulaire -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Mix de Production Électrique Français Instantané</h3>
+            <p class="chart-sub">Répartition en direct par filière technologique</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="mix-chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Échanges transfrontaliers -->
+      <div class="exchanges-card">
+        <div class="chart-header">
+          <h3 class="chart-title">Interconnexions & Échanges Internationaux (Temps Réel)</h3>
+          <p class="chart-sub">Flux commerciaux nets avec les réseaux voisins européens</p>
+        </div>
+        <div class="exchanges-list">
+          <div id="ex-uk"></div>
+          <div id="ex-spain"></div>
+          <div id="ex-italy"></div>
+          <div id="ex-switzerland"></div>
+          <div id="ex-germany-belgium"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONGLET 4 : À Propos & Méthodologie -->
+    <section id="tab-about" class="tab-pane hidden">
+      <div class="about-container">
+        <article class="doc-section">
+          <h2>À propos de NPP Monitor</h2>
+          <p>
+            <strong>NPP Monitor</strong> est un tableau de bord libre et ouvert dédié à l'observation en temps réel du parc électronucléaire français. Inspiré par les outils citoyens et énergétiques de référence créés lors de la crise énergétique européenne de 2022, il permet à chaque citoyen, chercheur ou observateur de suivre heure par heure la disponibilité, la puissance effective et l'état de chacune des 57 tranches nucléaires françaises en exploitation.
+          </p>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h4>📡 Données Réseau RTE (éCO2mix)</h4>
+              <p>Les données globales de production, de consommation, du mix électrique et des échanges transfrontaliers proviennent directement des télémesures officielles de RTE via l'API ouverte ODRÉ (Open Data Réseaux Énergies), actualisées toutes les 15 minutes.</p>
+            </div>
+            <div class="doc-box">
+              <h4>⚙️ Télémétrie Calibrée par Tranche</h4>
+              <p>La puissance de chaque tranche est ajustée en temps réel pour correspondre exactement à la puissance totale certifiée par RTE, en intégrant les programmes de rechargement de combustible, les visites décennales et le comportement de suivi de charge.</p>
+            </div>
+            <div class="doc-box">
+              <h4>🛡️ Données ASN & EDF</h4>
+              <p>Les caractéristiques techniques (paliers CP0, CP1, CP2, P4, P'4, N4, EPR, codes EIC, puissances thermiques brutes et nettes, sources de refroidissement) sont conformes aux déclarations officielles de l'ASN et d'EDF.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="doc-section">
+          <h2>Les Paliers Technologiques du Parc Français</h2>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h4>Palier 900 MWe (32 réacteurs)</h4>
+              <p>Comprend les sous-paliers <strong>CP0</strong> (Bugey, 4 réacteurs), <strong>CP1</strong> (18 réacteurs à Blayais, Dampierre, Gravelines, Tricastin) et <strong>CP2</strong> (10 réacteurs à Chinon, Cruas, Saint-Laurent). Réacteurs à 3 boucles d'eau sous pression standardisés.</p>
+            </div>
+            <div class="doc-box">
+              <h4>Palier 1300 MWe (20 réacteurs)</h4>
+              <p>Comprend les réacteurs à 4 boucles de palier <strong>P4</strong> (8 réacteurs à Flamanville, Paluel, Saint-Alban) et <strong>P'4</strong> (12 réacteurs à Belleville, Cattenom, Golfech, Nogent, Penly), dotés d'une double enceinte de confinement en béton.</p>
+            </div>
+            <div class="doc-box">
+              <h4>Palier N4 1450 MWe (4 réacteurs)</h4>
+              <p>Installé sur les sites de <strong>Chooz</strong> (Chooz B1, B2) et de <strong>Civaux</strong> (Civaux 1, 2). Technologie informatisée de pointe avec turbines Arabelle et enceintes précontraintes.</p>
+            </div>
+            <div class="doc-box">
+              <h4>Palier EPR 1650 MWe (1 réacteur)</h4>
+              <p>La tranche 3 de la centrale de <strong>Flamanville</strong> représente la 3e génération de réacteurs REP, avec 4 trains de sauvegarde indépendants et récupérateur de corium.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modale Détail Centrale (dialog natif) -->
+  <dialog id="plant-detail-dialog" aria-labelledby="plant-modal-title">
+    <div class="modal-header">
+      <h3 id="plant-modal-title">Détail de la Centrale</h3>
+      <button id="close-plant-modal" class="btn-close-modal" aria-label="Fermer">✕</button>
+    </div>
+    <div id="plant-modal-body" class="modal-body">
+      <!-- Rempli dynamiquement -->
+    </div>
+  </dialog>
+
+  <!-- Modale Détail Réacteur (dialog natif) -->
+  <dialog id="reactor-detail-dialog" aria-labelledby="reactor-modal-title">
+    <div class="modal-header">
+      <h3 id="reactor-modal-title">Détail de la Tranche</h3>
+      <button id="close-reactor-modal" class="btn-close-modal" aria-label="Fermer">✕</button>
+    </div>
+    <div id="reactor-modal-body" class="modal-body">
+      <!-- Rempli dynamiquement -->
+    </div>
+  </dialog>
+
+  <!-- Visionneuse d'image grand format (Lightbox) -->
+  <dialog id="image-lightbox-dialog" class="lightbox-dialog" aria-label="Photo haute résolution de la centrale">
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrap">
+        <button id="close-lightbox-btn" class="btn-close-lightbox" aria-label="Fermer le plein écran" onclick="document.getElementById('image-lightbox-dialog').close()">✕</button>
+        <img id="lightbox-img" src="" alt="Photo intégrale de la centrale" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption">
+        <span id="lightbox-caption-title" class="lightbox-caption-title">Centrale</span>
+        <span class="lightbox-caption-hint">Cliquez pour fermer ou appuyez sur Échap</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts dans l'ordre -->
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
