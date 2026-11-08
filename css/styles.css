@@ -32,6 +32,12 @@
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
@@ -39,6 +45,11 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 /* Header & Navigation */
@@ -111,6 +122,14 @@ body {
   padding: 0.25rem;
   border-radius: 8px;
   border: 1px solid var(--border-subtle);
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-tab {
@@ -126,6 +145,8 @@ body {
   align-items: center;
   gap: 0.4rem;
   transition: all 0.2s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nav-tab:hover {
@@ -1718,12 +1739,111 @@ dialog.lightbox-dialog::backdrop {
   .mix-grid { grid-template-columns: 1fr; }
   .plant-specs-grid { grid-template-columns: 1fr; }
   .controls-toolbar { flex-direction: column; align-items: stretch; }
-  .search-box { max-width: 100%; }
+  .search-box { max-width: 100%; min-width: 0; }
+  
+  .header-container {
+    gap: 0.75rem;
+  }
+  
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
-  .app-header { padding: 0.6rem 1rem; }
-  .main-content { padding: 1rem; }
-  .kpi-cards-grid { grid-template-columns: 1fr; }
-  .strip-header { flex-direction: column; align-items: flex-start; }
+  .app-header {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .header-container {
+    gap: 0.5rem;
+  }
+  
+  .site-title {
+    font-size: 1.15rem;
+  }
+  
+  .atom-icon {
+    font-size: 1.4rem;
+  }
+  
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+    padding: 0.2rem;
+    gap: 0.25rem;
+  }
+  
+  .nav-tab {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.65rem;
+  }
+  
+  .header-status-area {
+    order: 2;
+  }
+  
+  .kpis-banner {
+    padding: 0.85rem 0.75rem;
+  }
+  
+  .main-content {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .kpi-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .strip-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .strip-chips {
+    width: 100%;
+    gap: 0.35rem;
+  }
+  
+  .fleet-chip {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.45rem;
+  }
+  
+  .controls-toolbar {
+    padding: 0.75rem;
+    gap: 0.65rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+    gap: 0.45rem;
+  }
+  
+  .filter-select {
+    flex: 1 1 calc(50% - 0.45rem);
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.78rem;
+  }
+  
+  .view-mode-buttons {
+    width: 100%;
+  }
+  
+  .btn-view-mode {
+    flex: 1;
+    text-align: center;
+  }
+  
+  #france-map-container {
+    height: 520px;
+  }
+  
+  .map-view-header {
+    padding: 0.75rem;
+  }
 }
