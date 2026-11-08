@@ -3,7 +3,7 @@ name: "Actualisation Temps Réel RTE"
 on:
   schedule:
     # Exécution automatique toutes les 30 minutes
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Permet de déclencher manuellement en 1 clic
 
 permissions:
