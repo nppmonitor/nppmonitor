@@ -1,6 +1,6 @@
 # ⚛️ NPP Monitor
 
-> Site web temps réel pour suivre la production, la disponibilité et l'état de chacun des **57 réacteurs nucléaires français** (56 tranches historiques + l'EPR de Flamanville 3), inspiré par le site originel **Nuclear Monitor** (`nuclear-monitor.fr`).
+> Site web temps réel pour suivre la production, la disponibilité et l'état de chacun des **57 réacteurs nucléaires français** (56 tranches historiques + l'EPR de Flamanville 3).
 
 ---
 
@@ -82,7 +82,6 @@ Vous pouvez aussi simplement ouvrir le fichier `index.html` directement dans vot
 ## 🏗️ Structure du Projet
 
 ```text
-Nuclear monitor 2/
 ├── index.html          # Application principale SPA
 ├── css/
 │   └── styles.css      # Thème sombre salle de contrôle & responsive design
