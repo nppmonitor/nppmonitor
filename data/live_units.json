@@ -1,6 +1,6 @@
 {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-08T10:32:40.761215",
+  "updatedAt": "2026-11-08T11:42:34.514821",
   "unitsCount": 57,
   "totalNuclearMW": 39500,
   "stats": {
@@ -31123,8 +31123,8 @@
       "status": "PLANNED_STOP",
       "statusLabel": "À l'arrêt (0 MW)",
       "statusClass": "status-planned-stop",
-      "reason": "Essai programmé.",
-      "outageEndDate": "2026-11-10T18:00:00Z",
+      "reason": "Remontée à puissance maximale sans palier.",
+      "outageEndDate": "2026-11-08T16:30:00Z",
       "lastUpdated": "2026-11-07T23:00:00+01:00",
       "history": [
         {
