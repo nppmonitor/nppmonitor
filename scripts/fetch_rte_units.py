@@ -240,8 +240,25 @@ def process_and_save_data(rte_data, unavailabilities=None):
 
         total_power += power_mw
 
-        # Courbe historique des 24 dernières heures réelles
-        history_24h = [max(0, round(float(v.get('value', 0)))) for v in values[-24:]]
+        # Courbe historique des 48 dernières heures réelles (2 jours complets enregistrés)
+        history_48h = []
+        for v in values:
+            try:
+                raw_v = float(v.get('value', 0))
+                p = max(0, round(raw_v))
+                start_iso = v.get('start_date', '')
+                if start_iso:
+                    dt = datetime.datetime.fromisoformat(start_iso)
+                    label = dt.strftime('%d/%m %Hh')
+                else:
+                    label = '--'
+                history_48h.append({
+                    'time': label,
+                    'date': start_iso,
+                    'power': p
+                })
+            except Exception:
+                continue
 
         units_result[reactor['id']] = {
             'reactorId': reactor['id'],
@@ -258,7 +275,9 @@ def process_and_save_data(rte_data, unavailabilities=None):
             'reason': reason,
             'outageEndDate': outage_end_date,
             'lastUpdated': latest_val.get('start_date'),
-            'history': history_24h
+            'history': history_48h,
+            'history48h': history_48h,
+            'history24h': history_48h[-24:]
         }
 
     output = {
