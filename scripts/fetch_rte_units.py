@@ -96,14 +96,18 @@ def get_oauth_token(client_id, client_secret, api_name="RTE"):
 
 
 def fetch_actual_generation(token):
-    """Interroge l'endpoint Actual Generations per Unit pour les dernières 48 heures."""
+    """Interroge l'endpoint Actual Generations per Unit pour les 48 dernières heures glissantes jusqu'à aujourd'hui."""
     tz = ZoneInfo("Europe/Paris")
     now = datetime.datetime.now(tz)
-    # RTE impose une période minimale de 2 jours pour cet endpoint
-    start = (now - datetime.timedelta(days=2)).strftime('%Y-%m-%dT00:00:00+01:00')
-    end = now.strftime('%Y-%m-%dT00:00:00+01:00')
+    # RTE requiert au moins 2 jours calendaires et un encodage strict des dates
+    start_iso = (now - datetime.timedelta(days=2)).strftime('%Y-%m-%dT00:00:00+01:00')
+    end_iso = (now + datetime.timedelta(days=1)).strftime('%Y-%m-%dT00:00:00+01:00')
 
-    url = f"{API_ACTUAL_GEN_URL}?start_date={start}&end_date={end}"
+    params = urllib.parse.urlencode({
+        'start_date': start_iso,
+        'end_date': end_iso
+    })
+    url = f"{API_ACTUAL_GEN_URL}?{params}"
     print(f"[*] Interrogation de l'API Actual Generation: {url}")
 
     headers = {
@@ -113,7 +117,7 @@ def fetch_actual_generation(token):
 
     req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=20) as resp:
             data = json.load(resp)
             return data
     except urllib.error.HTTPError as e:
@@ -240,9 +244,10 @@ def process_and_save_data(rte_data, unavailabilities=None):
 
         total_power += power_mw
 
-        # Courbe historique des 48 dernières heures réelles (2 jours complets enregistrés)
+        # Courbe historique des 48 dernières heures glissantes réelles
         history_48h = []
-        for v in values:
+        recent_values = values[-48:] if len(values) >= 48 else values
+        for v in recent_values:
             try:
                 raw_v = float(v.get('value', 0))
                 p = max(0, round(raw_v))
