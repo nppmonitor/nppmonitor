@@ -210,14 +210,15 @@ class NuclearCharts {
   generateSparklineSvg(history, width = 120, height = 30) {
     if (!history || history.length === 0) return '';
 
-    const maxVal = Math.max(...history.map(d => d.power), 100);
-    const points = history.map((d, i) => {
-      const x = (i / (history.length - 1)) * width;
-      const y = height - (d.power / maxVal) * (height - 6) - 3;
+    const powers = history.map(d => (typeof d === 'number' ? d : (d.power ?? 0)));
+    const maxVal = Math.max(...powers, 100);
+    const points = powers.map((p, i) => {
+      const x = (i / (powers.length - 1)) * width;
+      const y = height - (p / maxVal) * (height - 6) - 3;
       return `${x.toFixed(1)},${y.toFixed(1)}`;
     }).join(' ');
 
-    const lastPower = history[history.length - 1].power;
+    const lastPower = powers[powers.length - 1];
     const strokeColor = lastPower > 0 ? '#10b981' : '#ef4444';
 
     return `

@@ -255,6 +255,8 @@ class NuclearMonitorAPI {
           r.statusLabel = live.statusLabel;
           r.statusClass = live.statusClass;
           if (live.history && live.history.length > 0) {
+            r.history = live.history;
+            r.history48h = live.history;
             r.history24h = live.history;
           }
         }

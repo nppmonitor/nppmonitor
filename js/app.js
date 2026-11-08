@@ -64,7 +64,7 @@ class NuclearMonitorApp {
           this.openImageLightbox(plant.photo, `Centrale Nucléaire de ${plant.name}`);
         }
       } else if (params.has('reactor')) {
-        this.openReactorModal(params.get('reactor').toUpperCase());
+        this.openReactorModal(params.get('reactor'));
       } else if (params.has('tab')) {
         this.switchTab(params.get('tab'));
       } else if (params.has('scroll')) {
@@ -767,8 +767,9 @@ class NuclearMonitorApp {
   }
 
   openReactorModal(reactorId) {
-    if (!this.fleetData) return;
-    const reactor = this.fleetData.reactors.find(r => r.id === reactorId);
+    if (!this.fleetData || !reactorId) return;
+    const cleanId = String(reactorId).toLowerCase();
+    const reactor = this.fleetData.reactors.find(r => r.id.toLowerCase() === cleanId);
     if (!reactor) return;
 
     const plant = this.fleetData.plantsMap[reactor.plantId] || {};
@@ -835,7 +836,7 @@ class NuclearMonitorApp {
             </div>
           </div>
 
-          <h4 class="section-title">Profil de production sur les dernières 24 heures</h4>
+          <h4 class="section-title">Profil de production sur les dernières 48 heures (2 jours réels RTE)</h4>
           <div class="reactor-chart-box">
             <canvas id="reactor-single-chart" height="180"></canvas>
           </div>
@@ -844,34 +845,95 @@ class NuclearMonitorApp {
 
       modal.showModal();
 
-      // Dessiner le graphique spécifique de ce réacteur
+      // Dessiner le graphique spécifique de ce réacteur (48h réelles)
       setTimeout(() => {
         const canvas = document.getElementById('reactor-single-chart');
-        if (canvas && reactor.history24h) {
+        if (canvas) {
+          // Détruire tout graphique précédent pour éviter le bug de réutilisation
+          const existingChart = Chart.getChart(canvas);
+          if (existingChart) {
+            existingChart.destroy();
+          }
+
+          const rawHistory = reactor.history || reactor.history48h || reactor.history24h || [];
+          const labels = rawHistory.map((h, i) => {
+            if (typeof h === 'number') return `-${rawHistory.length - i}h`;
+            return h.time || h.date || `${i}h`;
+          });
+          const dataPoints = rawHistory.map(h => (typeof h === 'number' ? h : (h.power ?? 0)));
+
+          // Couleur selon le statut
+          let lineColor = '#10b981';
+          let fillColor = 'rgba(16, 185, 129, 0.15)';
+          if (reactor.status === 'PLANNED_STOP') {
+            lineColor = '#f59e0b';
+            fillColor = 'rgba(245, 158, 11, 0.15)';
+          } else if (reactor.status === 'UNPLANNED_STOP') {
+            lineColor = '#ef4444';
+            fillColor = 'rgba(239, 68, 68, 0.15)';
+          } else if (reactor.status === 'MODULATING') {
+            lineColor = '#06b6d4';
+            fillColor = 'rgba(6, 182, 212, 0.15)';
+          } else if (reactor.status === 'COMMISSIONING') {
+            lineColor = '#a855f7';
+            fillColor = 'rgba(168, 85, 247, 0.15)';
+          }
+
           new Chart(canvas, {
             type: 'line',
             data: {
-              labels: reactor.history24h.map(h => h.time),
+              labels: labels,
               datasets: [{
                 label: `Puissance ${reactor.name} (MW)`,
-                data: reactor.history24h.map(h => h.power),
-                borderColor: '#10b981',
-                backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                data: dataPoints,
+                borderColor: lineColor,
+                backgroundColor: fillColor,
                 fill: true,
-                tension: 0.2,
-                pointRadius: 2,
+                tension: 0.25,
+                pointRadius: rawHistory.length > 24 ? 1.5 : 2.5,
+                pointHoverRadius: 5,
                 borderWidth: 2
               }]
             },
             options: {
               responsive: true,
               maintainAspectRatio: false,
-              plugins: { legend: { display: false } },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#0f172a',
+                  titleColor: '#f8fafc',
+                  bodyColor: '#38bdf8',
+                  borderColor: '#334155',
+                  borderWidth: 1,
+                  padding: 10,
+                  displayColors: false,
+                  callbacks: {
+                    label: function(context) {
+                      const mw = context.parsed.y;
+                      const pct = reactor.netPower_MW > 0 ? ((mw / reactor.netPower_MW) * 100).toFixed(1) : 0;
+                      return `Puissance : ${mw.toLocaleString('fr-FR')} MW (${pct}%)`;
+                    }
+                  }
+                }
+              },
               scales: {
-                x: { ticks: { color: '#94a3b8', maxTicksLimit: 12 } },
+                x: {
+                  ticks: {
+                    color: '#94a3b8',
+                    maxTicksLimit: 12,
+                    font: { size: 10 }
+                  },
+                  grid: { color: 'rgba(255, 255, 255, 0.05)' }
+                },
                 y: {
+                  min: 0,
                   suggestedMax: reactor.netPower_MW,
-                  ticks: { color: '#94a3b8' }
+                  ticks: {
+                    color: '#94a3b8',
+                    callback: function(val) { return val + ' MW'; }
+                  },
+                  grid: { color: 'rgba(255, 255, 255, 0.05)' }
                 }
               }
             }
