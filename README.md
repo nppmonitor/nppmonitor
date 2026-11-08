@@ -4,19 +4,6 @@
 
 ---
 
-## 🚀 Lancement Rapide
-
-Vous pouvez lancer l'application immédiatement avec le script Python inclus (aucune dépendance externe requise) :
-
-```bash
-python3 server.py
-```
-Puis ouvrez votre navigateur sur : **[http://localhost:8080](http://localhost:8080)** (ou le port indiqué dans le terminal).
-
-Vous pouvez aussi simplement ouvrir le fichier `index.html` directement dans votre navigateur web moderne.
-
----
-
 ## ✨ Fonctionnalités Clés
 
 ### 1. 📊 Tableau de Bord & KPIs Nationaux en Direct
