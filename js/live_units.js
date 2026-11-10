@@ -1,7 +1,7 @@
 // Données officielles RTE en temps réel par tranche (Actual Generation per Unit)
 const RTE_LIVE_UNITS = {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-10T18:04:40.102105",
+  "updatedAt": "2026-11-10T18:54:58.305903",
   "unitsCount": 57,
   "totalNuclearMW": 41778,
   "stats": {
@@ -20547,11 +20547,11 @@ const RTE_LIVE_UNITS = {
       "currentPower": 0,
       "nominalPower": 1310,
       "loadFactor": "0.0",
-      "status": "UNPLANNED_STOP",
-      "statusLabel": "Arrêt fortuit / imprévu",
-      "statusClass": "status-unplanned-stop",
-      "reason": "La durée indiquée de l'indisponibilité correspond à une durée forfaitaire de 24h, évaluée sur la base du retour d'expérience sur le parc nucléaire.",
-      "outageEndDate": "2026-11-11T06:58:00Z",
+      "status": "PLANNED_STOP",
+      "statusLabel": "À l'arrêt (0 MW)",
+      "statusClass": "status-planned-stop",
+      "reason": "Remontée par paliers en cours - prochain palier : 126 MW",
+      "outageEndDate": "2026-11-11T20:45:00Z",
       "lastUpdated": "2026-11-10T18:00:00+01:00",
       "history": [
         {
@@ -31125,7 +31125,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": null,
+      "outageEndDate": "2026-11-10T19:00:00Z",
       "lastUpdated": "2026-11-10T18:00:00+01:00",
       "history": [
         {
