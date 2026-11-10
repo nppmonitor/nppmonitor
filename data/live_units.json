@@ -1,6 +1,6 @@
 {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-10T10:08:56.872241",
+  "updatedAt": "2026-11-10T10:58:25.814344",
   "unitsCount": 57,
   "totalNuclearMW": 41934,
   "stats": {
@@ -14330,7 +14330,7 @@
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": null,
+      "outageEndDate": "2026-11-25T01:30:00Z",
       "lastUpdated": "2026-11-10T10:00:00+01:00",
       "history": [
         {
@@ -14952,7 +14952,7 @@
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": null,
+      "outageEndDate": "2026-12-02T01:30:00Z",
       "lastUpdated": "2026-11-10T10:00:00+01:00",
       "history": [
         {
