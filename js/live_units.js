@@ -1,7 +1,7 @@
 // Données officielles RTE en temps réel par tranche (Actual Generation per Unit)
 const RTE_LIVE_UNITS = {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-14T17:09:22.687125",
+  "updatedAt": "2026-11-14T17:45:18.848915",
   "unitsCount": 57,
   "totalNuclearMW": 44817,
   "stats": {
