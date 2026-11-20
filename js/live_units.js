@@ -1,13 +1,13 @@
 // Données officielles RTE en temps réel par tranche (Actual Generation per Unit)
 const RTE_LIVE_UNITS = {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-20T01:04:31.849957",
+  "updatedAt": "2026-11-20T02:14:33.807564",
   "unitsCount": 57,
-  "totalNuclearMW": 44481,
+  "totalNuclearMW": 42839,
   "stats": {
     "totalReactors": 57,
-    "runningCount": 38,
-    "modulatingCount": 6,
+    "runningCount": 36,
+    "modulatingCount": 8,
     "stoppedCount": 12,
     "commissioningCount": 1
   },
@@ -18,26 +18,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "BELLEVILLE",
       "stage": "P'4",
       "eicCode": "17W100P100P0090I",
-      "currentPower": 1097,
+      "currentPower": 1140,
       "nominalPower": 1310,
-      "loadFactor": "83.7",
+      "loadFactor": "87.0",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "outageEndDate": "2026-11-20T02:30:00Z",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 959
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 962
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -267,20 +257,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1097
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1127
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1140
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 959
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 962
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 963
@@ -509,19 +499,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1097
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1127
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1140
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 956
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 962
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -631,6 +621,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1097
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1127
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1140
         }
       ]
     },
@@ -640,26 +640,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "BELLEVILLE",
       "stage": "P'4",
       "eicCode": "17W100P100P0091G",
-      "currentPower": 1282,
+      "currentPower": 1281,
       "nominalPower": 1310,
-      "loadFactor": "97.9",
+      "loadFactor": "97.8",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1279
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1277
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -889,20 +879,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1281
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1279
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1277
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1275
@@ -1131,19 +1121,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1281
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1276
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1280
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -1253,6 +1243,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1281
         }
       ]
     },
@@ -1270,18 +1270,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -1510,21 +1500,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -1753,19 +1743,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -1874,6 +1864,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -1892,18 +1892,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-modulating",
       "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 357
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 190
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -2132,21 +2122,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 184
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 184
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 184
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 357
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 190
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 178
@@ -2375,19 +2365,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 184
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 184
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 184
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 932
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 819
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -2496,6 +2486,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 184
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 184
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 184
         }
       ]
@@ -2514,18 +2514,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 903
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 903
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -2754,21 +2744,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 909
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 909
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 909
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 903
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 903
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 903
@@ -2997,19 +2987,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 909
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 909
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 909
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 662
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 552
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -3118,6 +3108,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 909
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 909
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 909
         }
       ]
@@ -3136,18 +3136,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -3376,21 +3366,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -3619,19 +3609,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -3740,6 +3730,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -3758,18 +3758,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 894
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 865
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -3998,21 +3988,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 896
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 896
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 896
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 894
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 865
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 841
@@ -4241,19 +4231,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 896
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 896
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 896
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 894
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 894
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -4362,6 +4352,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 896
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 896
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 896
         }
       ]
@@ -4372,26 +4372,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "BUGEY",
       "stage": "CP0",
       "eicCode": "17W100P100P00974",
-      "currentPower": 877,
+      "currentPower": 878,
       "nominalPower": 910,
-      "loadFactor": "96.4",
+      "loadFactor": "96.5",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 868
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 868
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -4621,20 +4611,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 877
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 878
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 878
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 868
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 868
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 868
@@ -4863,19 +4853,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 877
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 878
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 878
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 877
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 877
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -4985,6 +4975,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 877
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 878
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 878
         }
       ]
     },
@@ -4994,26 +4994,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "BUGEY",
       "stage": "CP0",
       "eicCode": "17W100P100P00982",
-      "currentPower": 872,
+      "currentPower": 873,
       "nominalPower": 880,
-      "loadFactor": "99.1",
+      "loadFactor": "99.2",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 817
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 818
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -5243,20 +5233,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 872
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 817
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 818
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 819
@@ -5485,19 +5475,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 872
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 872
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 876
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -5607,6 +5597,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 872
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ]
     },
@@ -5616,26 +5616,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "BUGEY",
       "stage": "CP0",
       "eicCode": "17W100P100P01004",
-      "currentPower": 885,
+      "currentPower": 599,
       "nominalPower": 880,
-      "loadFactor": "100.6",
-      "status": "RUNNING",
-      "statusLabel": "En production nominale",
-      "statusClass": "status-running",
-      "reason": null,
+      "loadFactor": "68.1",
+      "status": "MODULATING",
+      "statusLabel": "En modulation (suivi de réseau)",
+      "statusClass": "status-modulating",
+      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 286
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 225
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -5865,20 +5855,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 885
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 736
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 599
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 286
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 225
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 234
@@ -6107,19 +6097,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 885
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 736
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 599
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 857
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 755
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -6229,6 +6219,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 885
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 736
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 599
         }
       ]
     },
@@ -6246,18 +6246,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-modulating",
       "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -6486,21 +6476,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1
@@ -6729,19 +6719,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -6850,6 +6840,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1
         }
       ]
@@ -6860,7 +6860,7 @@ const RTE_LIVE_UNITS = {
       "plantId": "CATTENOM",
       "stage": "P'4",
       "eicCode": "17W100P100P0103Z",
-      "currentPower": 1254,
+      "currentPower": 1255,
       "nominalPower": 1300,
       "loadFactor": "96.5",
       "status": "RUNNING",
@@ -6868,18 +6868,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1250
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1250
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -7109,20 +7099,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1254
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1254
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1255
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1250
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1250
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1251
@@ -7351,19 +7341,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1254
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1254
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1255
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1256
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1256
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -7473,6 +7463,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1254
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1254
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1255
         }
       ]
     },
@@ -7490,18 +7490,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt pour rechargement du combustible et maintenance programmée",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -7730,21 +7720,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -7973,19 +7963,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -8094,6 +8084,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -8104,26 +8104,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CATTENOM",
       "stage": "P'4",
       "eicCode": "17W100P100P0105V",
-      "currentPower": 917,
+      "currentPower": 919,
       "nominalPower": 1300,
-      "loadFactor": "70.5",
+      "loadFactor": "70.7",
       "status": "MODULATING",
       "statusLabel": "En modulation (suivi de réseau)",
       "statusClass": "status-modulating",
       "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 479
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 479
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -8353,20 +8343,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 917
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 918
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 919
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 479
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 479
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 478
@@ -8595,19 +8585,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 917
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 918
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 919
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 524
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 558
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -8717,6 +8707,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 917
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 918
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 919
         }
       ]
     },
@@ -8734,18 +8734,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 883
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 883
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -8974,21 +8964,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 885
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 885
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 885
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 883
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 883
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 884
@@ -9217,19 +9207,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 885
-        }
-      ],
-      "history24h": [
+        },
         {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
           "power": 885
         },
         {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 883
-        },
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 885
+        }
+      ],
+      "history24h": [
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -9338,6 +9328,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 885
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 885
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 885
         }
       ]
@@ -9356,18 +9356,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Visite partielle programmée",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -9596,21 +9586,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -9839,19 +9829,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -9960,6 +9950,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -9978,18 +9978,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 897
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 897
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -10218,21 +10208,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 903
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 903
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 903
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 897
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 897
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 900
@@ -10461,19 +10451,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 903
-        }
-      ],
-      "history24h": [
+        },
         {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
           "power": 903
         },
         {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 901
-        },
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 903
+        }
+      ],
+      "history24h": [
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -10582,6 +10572,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 903
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 903
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 903
         }
       ]
@@ -10592,26 +10592,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CHINON",
       "stage": "CP2",
       "eicCode": "17W100P100P0109N",
-      "currentPower": 903,
+      "currentPower": 902,
       "nominalPower": 905,
-      "loadFactor": "99.8",
+      "loadFactor": "99.7",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 901
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 902
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -10841,20 +10831,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 903
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 902
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 902
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 901
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 902
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 901
@@ -11083,19 +11073,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 903
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 902
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 902
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 903
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 902
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -11205,6 +11195,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 903
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 902
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 902
         }
       ]
     },
@@ -11222,18 +11222,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 806
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 805
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -11462,21 +11452,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1483
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1483
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1483
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 806
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 805
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 806
@@ -11705,19 +11695,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1483
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1483
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1483
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1482
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1483
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -11826,6 +11816,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1483
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1483
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1483
         }
       ]
@@ -11836,26 +11836,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CHOOZ",
       "stage": "N4",
       "eicCode": "17W100P100P0112Y",
-      "currentPower": 1496,
+      "currentPower": 1503,
       "nominalPower": 1500,
-      "loadFactor": "99.7",
+      "loadFactor": "100.2",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1496
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1496
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -12085,20 +12075,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1496
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1496
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1503
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1496
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1496
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1495
@@ -12327,19 +12317,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1496
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1496
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1503
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1494
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1494
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -12449,6 +12439,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1496
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1496
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1503
         }
       ]
     },
@@ -12458,26 +12458,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CIVAUX",
       "stage": "N4",
       "eicCode": "17W100P100P0113W",
-      "currentPower": 1120,
+      "currentPower": 1124,
       "nominalPower": 1495,
-      "loadFactor": "74.9",
-      "status": "MODULATING",
-      "statusLabel": "En modulation (suivi de réseau)",
-      "statusClass": "status-modulating",
-      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
+      "loadFactor": "75.2",
+      "status": "RUNNING",
+      "statusLabel": "En production nominale",
+      "statusClass": "status-running",
+      "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1399
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1221
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -12707,20 +12697,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1120
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1115
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1124
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1399
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1221
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1241
@@ -12949,19 +12939,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1120
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1115
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1124
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1489
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1494
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -13071,6 +13061,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1120
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1115
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1124
         }
       ]
     },
@@ -13080,26 +13080,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CIVAUX",
       "stage": "N4",
       "eicCode": "17W100P100P0114U",
-      "currentPower": 1442,
+      "currentPower": 1412,
       "nominalPower": 1495,
-      "loadFactor": "96.5",
+      "loadFactor": "94.4",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1464
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1464
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -13329,20 +13319,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1442
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1412
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1412
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1464
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1464
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1465
@@ -13571,19 +13561,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1442
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1412
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1412
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1392
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 617
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -13693,6 +13683,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1442
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1412
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1412
         }
       ]
     },
@@ -13710,18 +13710,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt pour rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -13950,21 +13940,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -14193,19 +14183,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -14314,6 +14304,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -14324,26 +14324,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CRUAS",
       "stage": "CP2",
       "eicCode": "17W100P100P0116Q",
-      "currentPower": 876,
+      "currentPower": 873,
       "nominalPower": 915,
-      "loadFactor": "95.7",
+      "loadFactor": "95.4",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 890
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 890
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -14573,20 +14563,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 876
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 890
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 890
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 890
@@ -14815,19 +14805,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 876
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 882
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 884
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -14937,6 +14927,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 876
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 873
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 873
         }
       ]
     },
@@ -14946,26 +14946,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CRUAS",
       "stage": "CP2",
       "eicCode": "17W100P100P0118M",
-      "currentPower": 899,
+      "currentPower": 900,
       "nominalPower": 915,
-      "loadFactor": "98.3",
+      "loadFactor": "98.4",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 885
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 884
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -15195,20 +15185,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 899
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 899
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 900
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 885
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 884
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 882
@@ -15437,19 +15427,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 899
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 899
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 900
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 905
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 899
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -15559,6 +15549,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 899
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 899
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 900
         }
       ]
     },
@@ -15568,26 +15568,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "CRUAS",
       "stage": "CP2",
       "eicCode": "17W100P100P0119K",
-      "currentPower": 395,
+      "currentPower": 440,
       "nominalPower": 915,
-      "loadFactor": "43.2",
+      "loadFactor": "48.1",
       "status": "MODULATING",
       "statusLabel": "En modulation (suivi de réseau)",
       "statusClass": "status-modulating",
       "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 377
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 377
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -15817,20 +15807,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 395
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 417
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 440
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 377
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 377
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 377
@@ -16059,19 +16049,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 395
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 417
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 440
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 377
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 377
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -16181,6 +16171,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 395
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 417
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 440
         }
       ]
     },
@@ -16198,18 +16198,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 868
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 868
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -16438,21 +16428,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 870
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 870
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 870
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 868
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 868
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 866
@@ -16681,19 +16671,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 870
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 870
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 870
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 867
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 869
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -16802,6 +16792,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 870
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 870
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 870
         }
       ]
@@ -16812,26 +16812,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "DAMPIERRE",
       "stage": "CP1",
       "eicCode": "17W100P100P0121X",
-      "currentPower": 915,
+      "currentPower": 916,
       "nominalPower": 890,
-      "loadFactor": "102.8",
+      "loadFactor": "102.9",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 920
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 923
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -17061,20 +17051,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 915
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 915
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 916
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 920
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 923
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 921
@@ -17303,19 +17293,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 915
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 915
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 916
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 921
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 924
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -17425,6 +17415,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 915
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 915
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 916
         }
       ]
     },
@@ -17442,18 +17442,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 895
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 896
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -17682,21 +17672,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 901
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 901
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 901
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 895
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 896
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 895
@@ -17925,19 +17915,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 901
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 901
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 901
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 897
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 898
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -18046,6 +18036,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 901
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 901
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 901
         }
       ]
@@ -18064,18 +18064,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Rechargement combustible et contrôle générateurs de vapeur",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -18304,21 +18294,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -18547,19 +18537,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -18668,6 +18658,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -18686,18 +18686,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -18926,21 +18916,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -19169,19 +19159,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -19290,6 +19280,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -19308,18 +19308,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1301
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1300
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -19548,21 +19538,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1300
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1300
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1300
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1301
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1300
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1300
@@ -19791,19 +19781,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1300
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1300
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1300
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1299
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1300
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -19912,6 +19902,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1300
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1300
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1300
         }
       ]
@@ -19922,26 +19922,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "GOLFECH",
       "stage": "P'4",
       "eicCode": "17W100P100P0128J",
-      "currentPower": 1282,
+      "currentPower": 1248,
       "nominalPower": 1310,
-      "loadFactor": "97.9",
+      "loadFactor": "95.3",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1239
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1241
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -20171,20 +20161,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1258
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1248
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1239
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1241
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1242
@@ -20413,19 +20403,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1258
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1248
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1264
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1256
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -20535,6 +20525,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1282
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1258
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1248
         }
       ]
     },
@@ -20544,26 +20544,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "GOLFECH",
       "stage": "P'4",
       "eicCode": "17W100P100P0129H",
-      "currentPower": 1284,
+      "currentPower": 1287,
       "nominalPower": 1310,
-      "loadFactor": "98.0",
+      "loadFactor": "98.2",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1278
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1277
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -20793,20 +20783,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1286
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1287
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1278
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1277
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1261
@@ -21035,19 +21025,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1286
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1287
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1283
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1280
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -21157,6 +21147,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1286
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1287
         }
       ]
     },
@@ -21174,18 +21174,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -21414,21 +21404,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -21657,19 +21647,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -21778,6 +21768,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -21796,18 +21796,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 897
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 898
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -22036,21 +22026,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 897
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 897
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 897
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 897
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 898
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 899
@@ -22279,19 +22269,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 897
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 897
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 897
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 896
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 896
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -22400,6 +22390,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 897
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 897
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 897
         }
       ]
@@ -22418,18 +22418,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -22658,21 +22648,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -22901,19 +22891,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -23022,6 +23012,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -23032,26 +23032,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "GRAVELINES",
       "stage": "CP1",
       "eicCode": "17W100P100P0133Q",
-      "currentPower": 651,
+      "currentPower": 647,
       "nominalPower": 910,
-      "loadFactor": "71.5",
+      "loadFactor": "71.1",
       "status": "MODULATING",
       "statusLabel": "En modulation (suivi de réseau)",
       "statusClass": "status-modulating",
       "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 658
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 658
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -23281,20 +23271,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 651
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 647
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 647
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 658
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 658
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 658
@@ -23523,19 +23513,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 651
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 647
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 647
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 945
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 945
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -23645,6 +23635,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 651
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 647
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 647
         }
       ]
     },
@@ -23662,18 +23662,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -23902,21 +23892,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -24145,19 +24135,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -24266,6 +24256,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -24276,26 +24276,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "GRAVELINES",
       "stage": "CP1",
       "eicCode": "17W100P100P0136K",
-      "currentPower": 939,
+      "currentPower": 938,
       "nominalPower": 910,
-      "loadFactor": "103.2",
+      "loadFactor": "103.1",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 938
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 939
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -24525,20 +24515,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 939
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 938
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 938
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 938
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 939
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 939
@@ -24767,19 +24757,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 939
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 938
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 938
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 938
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 938
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -24889,6 +24879,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 939
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 938
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 938
         }
       ]
     },
@@ -24906,18 +24906,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Visite partielle : renouvellement du combustible, maintenance des générateurs de vapeur et modifications de sûreté",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -25146,21 +25136,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -25389,19 +25379,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -25510,6 +25500,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -25520,26 +25520,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "NOGENT",
       "stage": "P'4",
       "eicCode": "17W100P100P0138G",
-      "currentPower": 1279,
+      "currentPower": 1282,
       "nominalPower": 1310,
-      "loadFactor": "97.6",
+      "loadFactor": "97.9",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1276
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1276
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -25769,20 +25759,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1279
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1282
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1276
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1276
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1277
@@ -26011,19 +26001,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1279
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1282
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1273
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1268
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -26133,6 +26123,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1279
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1281
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1282
         }
       ]
     },
@@ -26142,26 +26142,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "PALUEL",
       "stage": "P4",
       "eicCode": "17W100P100P0139E",
-      "currentPower": 1267,
+      "currentPower": 1266,
       "nominalPower": 1300,
-      "loadFactor": "97.5",
+      "loadFactor": "97.4",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1272
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1272
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -26391,20 +26381,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1267
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1265
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1266
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1272
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1272
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1272
@@ -26633,19 +26623,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1267
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1265
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1266
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1270
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1271
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -26755,6 +26745,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1267
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1265
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1266
         }
       ]
     },
@@ -26764,26 +26764,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "PALUEL",
       "stage": "P4",
       "eicCode": "17W100P100P0140T",
-      "currentPower": 1285,
+      "currentPower": 1283,
       "nominalPower": 1300,
-      "loadFactor": "98.8",
+      "loadFactor": "98.7",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1289
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1288
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -27013,20 +27003,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1285
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1283
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1289
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1288
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1287
@@ -27255,19 +27245,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1285
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1283
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1286
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1286
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -27377,6 +27367,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1285
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1283
         }
       ]
     },
@@ -27386,26 +27386,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "PALUEL",
       "stage": "P4",
       "eicCode": "17W100P100P0141R",
-      "currentPower": 1182,
+      "currentPower": 266,
       "nominalPower": 1300,
-      "loadFactor": "90.9",
-      "status": "RUNNING",
-      "statusLabel": "En production nominale",
-      "statusClass": "status-running",
-      "reason": null,
+      "loadFactor": "20.5",
+      "status": "MODULATING",
+      "statusLabel": "En modulation (suivi de réseau)",
+      "statusClass": "status-modulating",
+      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 778
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 758
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -27635,20 +27625,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1182
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 719
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 266
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 778
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 758
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 325
@@ -27877,19 +27867,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1182
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 719
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 266
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1152
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 497
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -27999,6 +27989,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1182
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 719
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 266
         }
       ]
     },
@@ -28008,7 +28008,7 @@ const RTE_LIVE_UNITS = {
       "plantId": "PALUEL",
       "stage": "P4",
       "eicCode": "17W100P100P0142P",
-      "currentPower": 1284,
+      "currentPower": 1285,
       "nominalPower": 1300,
       "loadFactor": "98.8",
       "status": "RUNNING",
@@ -28016,18 +28016,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1281
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1281
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -28257,20 +28247,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1285
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1281
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1281
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1281
@@ -28499,19 +28489,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1285
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1280
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1281
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -28621,6 +28611,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1284
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1284
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1285
         }
       ]
     },
@@ -28630,26 +28630,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "PENLY",
       "stage": "P'4",
       "eicCode": "17W100P100P0143N",
-      "currentPower": 1334,
+      "currentPower": 1333,
       "nominalPower": 1330,
-      "loadFactor": "100.3",
+      "loadFactor": "100.2",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1337
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1337
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -28879,20 +28869,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1334
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1334
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1333
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1337
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1337
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1319
@@ -29121,19 +29111,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1334
-        }
-      ],
-      "history24h": [
+        },
         {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
           "power": 1334
         },
         {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1271
-        },
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1333
+        }
+      ],
+      "history24h": [
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -29243,6 +29233,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1334
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1334
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1333
         }
       ]
     },
@@ -29260,18 +29260,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1322
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1322
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -29500,21 +29490,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1327
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1326
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1327
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1322
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1322
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1322
@@ -29743,19 +29733,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1327
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1326
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1327
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 1323
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1323
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -29864,6 +29854,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1327
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1326
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1327
         }
       ]
@@ -29874,26 +29874,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "ST_ALBAN",
       "stage": "P4",
       "eicCode": "17W100P100P0145J",
-      "currentPower": 1309,
+      "currentPower": 901,
       "nominalPower": 1335,
-      "loadFactor": "98.1",
-      "status": "RUNNING",
-      "statusLabel": "En production nominale",
-      "statusClass": "status-running",
-      "reason": null,
+      "loadFactor": "67.5",
+      "status": "MODULATING",
+      "statusLabel": "En modulation (suivi de réseau)",
+      "statusClass": "status-modulating",
+      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1316
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1306
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -30123,20 +30113,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1309
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1309
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 901
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1316
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1306
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1276
@@ -30365,19 +30355,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1309
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1309
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 901
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 548
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 1009
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -30487,6 +30477,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1309
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1309
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 901
         }
       ]
     },
@@ -30504,18 +30504,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1197
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1293
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -30744,21 +30734,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1192
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1192
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1192
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 1197
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 1293
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 1296
@@ -30987,19 +30977,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 1192
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1192
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 1192
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 338
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 338
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -31108,6 +31098,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 1192
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 1192
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 1192
         }
       ]
@@ -31126,18 +31126,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 876
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 875
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -31366,21 +31356,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 878
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 877
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 878
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 876
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 875
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 874
@@ -31609,19 +31599,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 878
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 877
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 878
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 881
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 881
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -31730,6 +31720,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 878
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 877
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 878
         }
       ]
@@ -31740,26 +31740,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "ST_LAURENT",
       "stage": "CP2",
       "eicCode": "17W100P100P0148D",
-      "currentPower": 867,
+      "currentPower": 869,
       "nominalPower": 915,
-      "loadFactor": "94.8",
+      "loadFactor": "95.0",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 739
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 241
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -31989,20 +31979,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 867
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 868
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 869
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 739
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 241
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 209
@@ -32231,19 +32221,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 867
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 868
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 869
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 868
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 868
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -32353,6 +32343,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 867
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 868
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 869
         }
       ]
     },
@@ -32370,18 +32370,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 830
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 830
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -32610,21 +32600,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 830
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 830
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 830
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 830
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 830
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 831
@@ -32853,19 +32843,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 830
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 830
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 830
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 830
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 830
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -32974,6 +32964,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 830
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 830
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 830
         }
       ]
@@ -32992,18 +32992,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 925
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 925
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -33232,21 +33222,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 925
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 925
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 925
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 925
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 925
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 925
@@ -33475,19 +33465,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 925
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 925
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 925
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 925
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 925
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -33596,6 +33586,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 925
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 925
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 925
         }
       ]
@@ -33614,18 +33614,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-planned-stop",
       "reason": "Maintenance sur circuit secondaire",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -33854,21 +33844,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -34097,19 +34087,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -34218,6 +34208,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
@@ -34228,26 +34228,16 @@ const RTE_LIVE_UNITS = {
       "plantId": "TRICASTIN",
       "stage": "CP1",
       "eicCode": "17W100P100P0153K",
-      "currentPower": 907,
+      "currentPower": 838,
       "nominalPower": 915,
-      "loadFactor": "99.1",
+      "loadFactor": "91.6",
       "status": "RUNNING",
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 219
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 185
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -34477,20 +34467,20 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 907
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 906
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 838
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 219
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 185
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 185
@@ -34719,19 +34709,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 907
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 906
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 838
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 908
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 589
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -34841,6 +34831,16 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 907
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 906
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 838
         }
       ]
     },
@@ -34858,18 +34858,8 @@ const RTE_LIVE_UNITS = {
       "statusClass": "status-commissioning",
       "reason": "Tranche EPR de 3e génération en phase d'essais réseau et montée en puissance par paliers.",
       "outageEndDate": null,
-      "lastUpdated": "2026-11-20T00:00:00+01:00",
+      "lastUpdated": "2026-11-20T02:00:00+01:00",
       "history": [
-        {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
@@ -35098,21 +35088,21 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ],
       "history48h": [
         {
-          "time": "18/11 01h",
-          "date": "2026-11-18T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "18/11 02h",
-          "date": "2026-11-18T02:00:00+01:00",
-          "power": 0
-        },
-        {
           "time": "18/11 03h",
           "date": "2026-11-18T03:00:00+01:00",
           "power": 0
@@ -35341,19 +35331,19 @@ const RTE_LIVE_UNITS = {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
           "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
+          "power": 0
         }
       ],
       "history24h": [
-        {
-          "time": "19/11 01h",
-          "date": "2026-11-19T01:00:00+01:00",
-          "power": 0
-        },
-        {
-          "time": "19/11 02h",
-          "date": "2026-11-19T02:00:00+01:00",
-          "power": 0
-        },
         {
           "time": "19/11 03h",
           "date": "2026-11-19T03:00:00+01:00",
@@ -35462,6 +35452,16 @@ const RTE_LIVE_UNITS = {
         {
           "time": "20/11 00h",
           "date": "2026-11-20T00:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 01h",
+          "date": "2026-11-20T01:00:00+01:00",
+          "power": 0
+        },
+        {
+          "time": "20/11 02h",
+          "date": "2026-11-20T02:00:00+01:00",
           "power": 0
         }
       ]
