@@ -1,7 +1,7 @@
 // Données officielles RTE en temps réel par tranche (Actual Generation per Unit)
 const RTE_LIVE_UNITS = {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-19T23:18:12.448923",
+  "updatedAt": "2026-11-20T00:02:13.001232",
   "unitsCount": 57,
   "totalNuclearMW": 44489,
   "stats": {
@@ -25,7 +25,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-20T01:30:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -4379,7 +4379,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-20T23:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -6867,7 +6867,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-21T03:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -8110,8 +8110,8 @@ const RTE_LIVE_UNITS = {
       "status": "MODULATING",
       "statusLabel": "En modulation (suivi de réseau)",
       "statusClass": "status-modulating",
-      "reason": "En modulation / reprise : Remontée par paliers en cours",
-      "outageEndDate": "2026-11-20T18:30:00Z",
+      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -10599,7 +10599,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-21T18:30:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -13087,7 +13087,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-19T16:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -15574,8 +15574,8 @@ const RTE_LIVE_UNITS = {
       "status": "MODULATING",
       "statusLabel": "En modulation (suivi de réseau)",
       "statusClass": "status-modulating",
-      "reason": "En modulation / reprise : Remontée par paliers en cours",
-      "outageEndDate": "2026-11-21T14:00:00Z",
+      "reason": "Puissance modulée à la baisse pour adapter la production aux besoins instantanés du réseau.",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -19929,7 +19929,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-21T18:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -21795,7 +21795,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-22T00:10:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -28015,7 +28015,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-20T15:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -29881,7 +29881,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-19T07:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -30503,7 +30503,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-19T15:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
@@ -31747,7 +31747,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "En production nominale",
       "statusClass": "status-running",
       "reason": null,
-      "outageEndDate": "2026-11-19T21:00:00Z",
+      "outageEndDate": null,
       "lastUpdated": "2026-11-19T23:00:00+01:00",
       "history": [
         {
