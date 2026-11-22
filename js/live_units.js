@@ -1,7 +1,7 @@
 // Données officielles RTE en temps réel par tranche (Actual Generation per Unit)
 const RTE_LIVE_UNITS = {
   "source": "RTE Official API (Actual Generation per Unit)",
-  "updatedAt": "2026-11-22T16:03:44.166479",
+  "updatedAt": "2026-11-22T16:49:56.557061",
   "unitsCount": 57,
   "totalNuclearMW": 42835,
   "stats": {
@@ -3135,7 +3135,7 @@ const RTE_LIVE_UNITS = {
       "statusLabel": "À l'arrêt (0 MW)",
       "statusClass": "status-planned-stop",
       "reason": "Arrêt de tranche pour maintenance / rechargement du combustible",
-      "outageEndDate": "2026-11-22T16:00:00Z",
+      "outageEndDate": "2026-11-22T17:00:00Z",
       "lastUpdated": "2026-11-22T16:00:00+01:00",
       "history": [
         {
